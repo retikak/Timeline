@@ -13,6 +13,13 @@
 		01E3FC2F1BE92C7600187536 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E3FC2D1BE92C7600187536 /* LaunchScreen.storyboard */; };
 		01E3FC3A1BE92C7700187536 /* TimelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E3FC391BE92C7700187536 /* TimelineTests.swift */; };
 		01E3FC451BE92C7700187536 /* TimelineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E3FC441BE92C7700187536 /* TimelineUITests.swift */; };
+		7918B5601C7CFA160003E082 /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918B55F1C7CFA160003E082 /* TimelineTableViewController.swift */; };
+		7918B5621C7CFB960003E082 /* PostDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918B5611C7CFB960003E082 /* PostDetailTableViewController.swift */; };
+		7918B5641C7CFD0B0003E082 /* UserSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918B5631C7CFD0B0003E082 /* UserSearchTableViewController.swift */; };
+		7918B5661C7CFF5B0003E082 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918B5651C7CFF5B0003E082 /* ProfileViewController.swift */; };
+		7918B5681C7D02F40003E082 /* AddPhotoTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918B5671C7D02F40003E082 /* AddPhotoTableTableViewController.swift */; };
+		7918B56A1C7D044C0003E082 /* LoginSignupChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918B5691C7D044C0003E082 /* LoginSignupChoiceViewController.swift */; };
+		7918B56C1C7D05270003E082 /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918B56B1C7D05270003E082 /* LoginSignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +52,13 @@
 		01E3FC401BE92C7700187536 /* TimelineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E3FC441BE92C7700187536 /* TimelineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineUITests.swift; sourceTree = "<group>"; };
 		01E3FC461BE92C7700187536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7918B55F1C7CFA160003E082 /* TimelineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewController.swift; sourceTree = "<group>"; };
+		7918B5611C7CFB960003E082 /* PostDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewController.swift; sourceTree = "<group>"; };
+		7918B5631C7CFD0B0003E082 /* UserSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchTableViewController.swift; sourceTree = "<group>"; };
+		7918B5651C7CFF5B0003E082 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		7918B5671C7D02F40003E082 /* AddPhotoTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoTableTableViewController.swift; sourceTree = "<group>"; };
+		7918B5691C7D044C0003E082 /* LoginSignupChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSignupChoiceViewController.swift; sourceTree = "<group>"; };
+		7918B56B1C7D05270003E082 /* LoginSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +111,13 @@
 			children = (
 				01E3FC241BE92C7600187536 /* AppDelegate.swift */,
 				01E3FC281BE92C7600187536 /* Main.storyboard */,
+				7918B56B1C7D05270003E082 /* LoginSignupViewController.swift */,
+				7918B5691C7D044C0003E082 /* LoginSignupChoiceViewController.swift */,
+				7918B5671C7D02F40003E082 /* AddPhotoTableTableViewController.swift */,
+				7918B5651C7CFF5B0003E082 /* ProfileViewController.swift */,
+				7918B5631C7CFD0B0003E082 /* UserSearchTableViewController.swift */,
+				7918B5611C7CFB960003E082 /* PostDetailTableViewController.swift */,
+				7918B55F1C7CFA160003E082 /* TimelineTableViewController.swift */,
 				01E3FC2B1BE92C7600187536 /* Assets.xcassets */,
 				01E3FC2D1BE92C7600187536 /* LaunchScreen.storyboard */,
 				01E3FC301BE92C7600187536 /* Info.plist */,
@@ -253,7 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7918B56C1C7D05270003E082 /* LoginSignupViewController.swift in Sources */,
+				7918B56A1C7D044C0003E082 /* LoginSignupChoiceViewController.swift in Sources */,
+				7918B5601C7CFA160003E082 /* TimelineTableViewController.swift in Sources */,
 				01E3FC251BE92C7600187536 /* AppDelegate.swift in Sources */,
+				7918B5661C7CFF5B0003E082 /* ProfileViewController.swift in Sources */,
+				7918B5681C7D02F40003E082 /* AddPhotoTableTableViewController.swift in Sources */,
+				7918B5641C7CFD0B0003E082 /* UserSearchTableViewController.swift in Sources */,
+				7918B5621C7CFB960003E082 /* PostDetailTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +506,7 @@
 				01E3FC4B1BE92C7700187536 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01E3FC4C1BE92C7700187536 /* Build configuration list for PBXNativeTarget "TimelineTests" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +515,7 @@
 				01E3FC4E1BE92C7700187536 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01E3FC4F1BE92C7700187536 /* Build configuration list for PBXNativeTarget "TimelineUITests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +524,7 @@
 				01E3FC511BE92C7700187536 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
