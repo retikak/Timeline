@@ -20,6 +20,13 @@
 		7918B5681C7D02F40003E082 /* AddPhotoTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918B5671C7D02F40003E082 /* AddPhotoTableTableViewController.swift */; };
 		7918B56A1C7D044C0003E082 /* LoginSignupChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918B5691C7D044C0003E082 /* LoginSignupChoiceViewController.swift */; };
 		7918B56C1C7D05270003E082 /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918B56B1C7D05270003E082 /* LoginSignupViewController.swift */; };
+		79AED1511C7D0F0C00D4D79D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AED1501C7D0F0C00D4D79D /* User.swift */; };
+		79AED1531C7D150700D4D79D /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AED1521C7D150700D4D79D /* Comment.swift */; };
+		79AED1551C7D178500D4D79D /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AED1541C7D178500D4D79D /* Like.swift */; };
+		79AED1571C7D19DD00D4D79D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AED1561C7D19DD00D4D79D /* Post.swift */; };
+		79AED15B1C7D1D5F00D4D79D /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AED15A1C7D1D5F00D4D79D /* UserController.swift */; };
+		79AED15D1C7D2A5B00D4D79D /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AED15C1C7D2A5B00D4D79D /* PostController.swift */; };
+		79AED15F1C7D469600D4D79D /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AED15E1C7D469600D4D79D /* ImageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +66,13 @@
 		7918B5671C7D02F40003E082 /* AddPhotoTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoTableTableViewController.swift; sourceTree = "<group>"; };
 		7918B5691C7D044C0003E082 /* LoginSignupChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSignupChoiceViewController.swift; sourceTree = "<group>"; };
 		7918B56B1C7D05270003E082 /* LoginSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSignupViewController.swift; sourceTree = "<group>"; };
+		79AED1501C7D0F0C00D4D79D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		79AED1521C7D150700D4D79D /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		79AED1541C7D178500D4D79D /* Like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
+		79AED1561C7D19DD00D4D79D /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		79AED15A1C7D1D5F00D4D79D /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		79AED15C1C7D2A5B00D4D79D /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		79AED15E1C7D469600D4D79D /* ImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +103,9 @@
 		01E3FC181BE92C7600187536 = {
 			isa = PBXGroup;
 			children = (
+				79AED15A1C7D1D5F00D4D79D /* UserController.swift */,
+				79AED15C1C7D2A5B00D4D79D /* PostController.swift */,
+				79AED15E1C7D469600D4D79D /* ImageController.swift */,
 				01E3FC231BE92C7600187536 /* Timeline */,
 				01E3FC381BE92C7700187536 /* TimelineTests */,
 				01E3FC431BE92C7700187536 /* TimelineUITests */,
@@ -111,13 +128,8 @@
 			children = (
 				01E3FC241BE92C7600187536 /* AppDelegate.swift */,
 				01E3FC281BE92C7600187536 /* Main.storyboard */,
-				7918B56B1C7D05270003E082 /* LoginSignupViewController.swift */,
-				7918B5691C7D044C0003E082 /* LoginSignupChoiceViewController.swift */,
-				7918B5671C7D02F40003E082 /* AddPhotoTableTableViewController.swift */,
-				7918B5651C7CFF5B0003E082 /* ProfileViewController.swift */,
-				7918B5631C7CFD0B0003E082 /* UserSearchTableViewController.swift */,
-				7918B5611C7CFB960003E082 /* PostDetailTableViewController.swift */,
-				7918B55F1C7CFA160003E082 /* TimelineTableViewController.swift */,
+				79AED1581C7D1CAE00D4D79D /* Model */,
+				79AED1591C7D1CDB00D4D79D /* Controller */,
 				01E3FC2B1BE92C7600187536 /* Assets.xcassets */,
 				01E3FC2D1BE92C7600187536 /* LaunchScreen.storyboard */,
 				01E3FC301BE92C7600187536 /* Info.plist */,
@@ -141,6 +153,31 @@
 				01E3FC461BE92C7700187536 /* Info.plist */,
 			);
 			path = TimelineUITests;
+			sourceTree = "<group>";
+		};
+		79AED1581C7D1CAE00D4D79D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				79AED1561C7D19DD00D4D79D /* Post.swift */,
+				79AED1541C7D178500D4D79D /* Like.swift */,
+				79AED1521C7D150700D4D79D /* Comment.swift */,
+				79AED1501C7D0F0C00D4D79D /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		79AED1591C7D1CDB00D4D79D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7918B56B1C7D05270003E082 /* LoginSignupViewController.swift */,
+				7918B5691C7D044C0003E082 /* LoginSignupChoiceViewController.swift */,
+				7918B5671C7D02F40003E082 /* AddPhotoTableTableViewController.swift */,
+				7918B5631C7CFD0B0003E082 /* UserSearchTableViewController.swift */,
+				7918B5611C7CFB960003E082 /* PostDetailTableViewController.swift */,
+				7918B55F1C7CFA160003E082 /* TimelineTableViewController.swift */,
+				7918B5651C7CFF5B0003E082 /* ProfileViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,9 +314,16 @@
 				7918B56C1C7D05270003E082 /* LoginSignupViewController.swift in Sources */,
 				7918B56A1C7D044C0003E082 /* LoginSignupChoiceViewController.swift in Sources */,
 				7918B5601C7CFA160003E082 /* TimelineTableViewController.swift in Sources */,
+				79AED1571C7D19DD00D4D79D /* Post.swift in Sources */,
 				01E3FC251BE92C7600187536 /* AppDelegate.swift in Sources */,
+				79AED15F1C7D469600D4D79D /* ImageController.swift in Sources */,
+				79AED15B1C7D1D5F00D4D79D /* UserController.swift in Sources */,
 				7918B5661C7CFF5B0003E082 /* ProfileViewController.swift in Sources */,
+				79AED1531C7D150700D4D79D /* Comment.swift in Sources */,
+				79AED1511C7D0F0C00D4D79D /* User.swift in Sources */,
 				7918B5681C7D02F40003E082 /* AddPhotoTableTableViewController.swift in Sources */,
+				79AED1551C7D178500D4D79D /* Like.swift in Sources */,
+				79AED15D1C7D2A5B00D4D79D /* PostController.swift in Sources */,
 				7918B5641C7CFD0B0003E082 /* UserSearchTableViewController.swift in Sources */,
 				7918B5621C7CFB960003E082 /* PostDetailTableViewController.swift in Sources */,
 			);
