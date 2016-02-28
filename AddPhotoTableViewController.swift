@@ -1,14 +1,14 @@
 //
-//  AddPhotoTableTableViewController.swift
+//  AddPhotoTableViewController.swift
 //  Timeline
 //
-//  Created by Retika Kumar on 2/23/16.
+//  Created by Retika Kumar on 2/25/16.
 //  Copyright © 2016 DevMountain. All rights reserved.
 //
 
 import UIKit
 
-class AddPhotoTableTableViewController: UITableViewController {
+class AddPhotoTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -16,23 +16,26 @@ struct User: Equatable {
     
     
     
-    let username: String
-    let bio:String?
-    let url:String?
-    let identifier:String?
+    var username = ""
+    var bio:String?
+    var url:String?
+    var identifier:String?
+    var endpoint:String {
+        return "users"
+    }
     
 
 
-init(username:String, bio:String? = nil, url:String? = nil){
+init(username:String, uid:String, bio:String? = nil, url:String? = nil){
 self.username = username
 self.bio = bio
 self.url = url
-self.identifier = identifier
+self.identifier = uid
     
 }
 }
 
-func == (lhs: User, rhs:User) -> Bool {
-    return(lhs:username == rhs:username) && (lhs:identifier == rhs:identifier)
+func ==(lhs: User, rhs:User) -> Bool {
+return (lhs.username == rhs.username) && (lhs.identifier == rhs.identifier)
 }
 
