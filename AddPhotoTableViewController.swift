@@ -8,7 +8,10 @@
 
 import UIKit
 
-class AddPhotoTableViewController: UITableViewController {
+class AddPhotoTableViewController: UITableViewController, UIImagePickerControllerDelegate, UITextFieldDelegate, UINavigationControllerDelegate {
+
+    @IBOutlet weak var addPhotoButton: UIButton!
+    @IBOutlet weak var captionTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,18 +28,54 @@ class AddPhotoTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
 
+    // MARK: - Action
+
+    @IBAction func addPhotoButtonTapped() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        self.presentViewController(imagePicker, animated: true, completion: nil)
+    }
+
+    @IBAction func submittButtonTapped() {
+
+        if let image = addPhotoButton.backgroundImageForState(.Normal) {
+            PostController.addPost(image, caption: captionTextField.text) { (success, post) in }
+        }
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    @IBAction func cancelButtonTapped() {
+        dismissViewControllerAnimated(true) { 
+            
+        }
+    }
+
+    // MARK: Delegate
+
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        addPhotoButton.setBackgroundImage(image, forState: .Normal)
+        addPhotoButton.setTitle(nil, forState: .Normal)
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
+    // MARK: - Table view data source
+    /*
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
-
+     */
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)

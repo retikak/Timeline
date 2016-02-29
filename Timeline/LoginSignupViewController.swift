@@ -96,19 +96,17 @@ func updateViewBasedOnMode () {
     @IBAction func actionButtonTapped(sender: AnyObject) {
         if fieldsAreValid {
             switch viewMode {
-            case .Login:
-                UserController.authenticateUser(emailTextField.text!, password: passwordTextField.text!, completion: { (success, user) -> Void in
-                    if success, let _ = user {
-                        
-                    }
+            case .Signup:
+                UserController.createUser(emailTextField.text!, username: usernameTextField.text!, password: passwordTextField.text!, bio: bioTextField.text!, url: urlTextField.text!, completion: { (success, user) in
+                    self.dismissViewControllerAnimated(true, completion: nil)
                 })
-                
-                
-                
+            default:
+                return
             }
         }
-        
-        
+        else {
+            UIAlertView.init(title: "Missing Information", message: "Please check your information and try again.", delegate: nil, cancelButtonTitle: "OK").show()
+        }
     }
 }
 

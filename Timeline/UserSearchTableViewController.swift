@@ -10,40 +10,41 @@ import UIKit
 
 class UserSearchTableViewController: UITableViewController , UISearchResultsUpdating {
     
-    enum ViewMode: Int {
-        case Friends = 0
-        case All =  1
-        func users(completion: (users: [User]?) -> Void) {
-            switch self {
-            case .Friends:
-                UserController.followedByUser(UserController.sharedController.currentUser) { (followers) -> Void in
-                    completion(users: followers)
-                    
-                    case .All:
-                    UserController.fetchAllUsers() {(users) -> Void in
-                    completion(users: users)
-                    }
-                }
-                
-            }
-        }
+//    enum ViewMode: Int {
+//        case Friends = 0
+//        case All =  1
+//        func users(completion: (users: [User]?) -> Void) {
+//            switch self {
+//            case .Friends:
+//                UserController.followedByUser(UserController.sharedController.currentUser) { (followers) -> Void in
+//                    completion(users: followers)
+//                }
+//                    case .All:
+//                    UserController.fetchAllUsers() {(users) -> Void in
+//                    completion(users: users)
+//                    }
+//                }
+//                
+//            }
+//        }
+
+        
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+    }
         
         
-        
-        
-        
-        @IBOutlet weak var modeSegmentedControl: UISegmentedControl!
-        
-        let userDataSource:[User] = []
-        
-        var mode: ViewMode {
-            get {
-                return ViewMode(rawValue: modeSegmentedControl.selectedSegmentIndex)!
-            }
-        }
-        var searchController = UISearchController
-        
-        
+//        @IBOutlet weak var modeSegmentedControl: UISegmentedControl!
+//        
+//        let userDataSource:[User] = []
+//        
+//        var mode: ViewMode {
+//            get {
+//                return ViewMode(rawValue: modeSegmentedControl.selectedSegmentIndex)!
+//            }
+//        }
+//        var searchController = UISearchController
+//        
+
 
         
         
@@ -57,33 +58,33 @@ class UserSearchTableViewController: UITableViewController , UISearchResultsUpda
         //MARK:- Search Controller
         
         func setUpSearchController() {
-            let resultsController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("userSearchResultsTableViewController")
-            searchController = UISearchController(searchResultsController: resultsController)
-            searchController.
-            
-            
-            
-            
-            
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            
-            
-            
-            
-            
-            updateViewForMode()
-            setUpSearchController()
-            
+//            let resultsController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("userSearchResultsTableViewController")
+//            searchController = UISearchController(searchResultsController: resultsController)
+//            searchController.
+//            
+//            
+//            
+//            
+//            
+//        }
+//        
+//        
+//        
+//        
+//        
+//        
+//        
+//        
+//        override func viewDidLoad() {
+//            super.viewDidLoad()
+//            
+//            
+//            
+//            
+//            
+//            updateViewForMode()
+//            setUpSearchController()
+
             
             
             // Uncomment the following line to preserve selection between presentations
@@ -107,15 +108,15 @@ class UserSearchTableViewController: UITableViewController , UISearchResultsUpda
         
         override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             // #warning Incomplete implementation, return the number of rows
-            return userDataSource.count
+            return 0 //userDataSource.count
         }
         
         
         override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCellWithIdentifier("usernameCell", forIndexPath: indexPath)
             
-            let user = userDataSource[indexPath.row]
-            cell.textLabel?.text = user.username
+            //let user = userDataSource[indexPath.row]
+            //cell.textLabel?.text = user.username
             return cell
         }
         
@@ -167,7 +168,4 @@ class UserSearchTableViewController: UITableViewController , UISearchResultsUpda
         func updateViewBasedOnMode() {
             
         }
-        
-        
-    }
 }

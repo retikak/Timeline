@@ -185,8 +185,8 @@
 		79AED1591C7D1CDB00D4D79D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7918B56B1C7D05270003E082 /* LoginSignupViewController.swift */,
 				79AED2A21C7FF03B00D4D79D /* AddPhotoTableViewController.swift */,
+				7918B56B1C7D05270003E082 /* LoginSignupViewController.swift */,
 				7918B5691C7D044C0003E082 /* LoginSignupChoiceViewController.swift */,
 				7918B5631C7CFD0B0003E082 /* UserSearchTableViewController.swift */,
 				79AED2A01C7FE2B300D4D79D /* UserSearchResultsTableViewController.swift */,

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct User: Equatable {
+class User: Equatable {
     
     private let kUserName = "username"
     private let kBio = "bio"

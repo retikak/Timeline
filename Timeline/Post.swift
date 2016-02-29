@@ -7,29 +7,29 @@
 //
 
 import Foundation
+import UIKit
 
-struct Post:Equatable {
+class Post:Equatable {
     
-    let imageEndPoint:String
+    let image:UIImage
     let caption:String?
     let username:String
-    let comments:[Comment]
+    var comments:[Comment]
     var likes:[Like]
     var identifier:String?
     
     
     
-    init(imageEndpoint:String, caption:String?, username:String = "", comments:[Comment] = [], likes:[Like] = [], identifier:String? = nil){
-    
-    self.imageEndPoint = imageEndPoint
-    self.caption = caption
-    self.username = username
-    self.comments = comments
-    self.likes = likes
-    
-}
+    init(image:UIImage, caption:String?, username:String = "", comments:[Comment] = [], likes:[Like] = [], identifier:String? = nil) {    
+        self.image = image
+        self.caption = caption
+        self.username = username
+        self.comments = comments
+        self.likes = likes
+        self.identifier = identifier
+    }
 }
 
 func == (lhs:Post, rhs:Post)-> Bool {
-    return(lhs:username == rhs:username) && (lhs:identifier == rhs:identifier)
+    return(lhs.username == rhs.username) && (lhs.identifier == rhs.identifier)
 }

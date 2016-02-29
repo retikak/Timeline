@@ -8,11 +8,8 @@
 
 import Foundation
 
-struct Comment: Equatable {
-    
-    
-    
-    
+class Comment: Equatable {
+
     let username:String
     let text:String
     let postIdentifier:String
@@ -30,5 +27,5 @@ struct Comment: Equatable {
 }
 
 func == (lhs:Comment, rhs:Comment) -> Bool {
-    return(lhs:username == rhs.username) && (lhs:identifier == rhs.identifier)
+    return(lhs.username == rhs.username) && (lhs.identifier == rhs.identifier)
 }

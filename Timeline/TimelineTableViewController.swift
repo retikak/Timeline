@@ -10,6 +10,8 @@ import UIKit
 
 class TimelineTableViewController: UITableViewController {
 
+    var posts = [Post]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,32 +22,59 @@ class TimelineTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    override func viewWillAppear(animated: Bool) {
+        // Create user for now
+        if UserController.sharedController.currentUser == nil {
+            UserController.createUser("tim@me.com", username: "timcook", password: "timcook", bio: nil, url: nil, completion: { (success, user) in})
+            //tabBarController?.performSegueWithIdentifier("noCurrentUserSegue", sender:nil)
+        }
+        else {
+            loadTimelineForUser()
+        }
+
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    func loadTimelineForUser() {
+        PostController.fetchTimelineForUser(UserController.sharedController.currentUser) { (posts) in
+            self.posts = posts!
+            self.tableView.reloadData()
+        }
+    }
+
+
+    @IBAction func userRefreshedTable(sender: UIRefreshControl) {
+        tableView.reloadData()
+        sender.endRefreshing()
     }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        print("posts: \(posts.count)")
+        return posts.count
     }
 
-    /*
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("postCell", forIndexPath: indexPath) as! PostTableViewCell
 
         // Configure the cell...
-
+        let post = posts[indexPath.row]
+        cell.updateWithPost(post)
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -82,14 +111,17 @@ class TimelineTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "timelineToPostDetail" {
+            let postDetailTableViewController = segue.destinationViewController as! PostDetailTableViewController
+            if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPathForCell(cell) {
+                postDetailTableViewController.post = posts[indexPath.row]
+            }
+        }
     }
-    */
 
 }

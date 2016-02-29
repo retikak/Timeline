@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Like: Equatable {
+class Like: Equatable {
     
     let username:String
     let postIdentifier:String
