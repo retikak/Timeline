@@ -32,9 +32,27 @@ class AddPhotoTableViewController: UITableViewController, UIImagePickerControlle
     // MARK: - Action
 
     @IBAction func addPhotoButtonTapped() {
+
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        self.presentViewController(imagePicker, animated: true, completion: nil)
+
+        let alert = UIAlertController(title: "Please choose image source", message: nil, preferredStyle: .ActionSheet)
+
+        let photoAction = UIAlertAction(title: "Photo Library", style: .Default, handler: { (_) -> Void in
+            imagePicker.sourceType = .PhotoLibrary
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        })
+
+        let cameraAction = UIAlertAction(title: "Camera", style: .Default, handler: { (_) -> Void in
+            imagePicker.sourceType = .Camera
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        })
+
+        alert.addAction(photoAction)
+        alert.addAction(cameraAction)
+
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 
     @IBAction func submittButtonTapped() {
