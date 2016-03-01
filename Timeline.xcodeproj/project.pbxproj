@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001E197D1C853E6B00BD981E /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 001E197C1C853E6B00BD981E /* libicucore.tbd */; };
+		001E197F1C853E8800BD981E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 001E197E1C853E8800BD981E /* libc++.tbd */; };
+		001E19811C853EA100BD981E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001E19801C853EA100BD981E /* CFNetwork.framework */; };
+		001E19831C853EA900BD981E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001E19821C853EA900BD981E /* Security.framework */; };
+		001E19851C853EB300BD981E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001E19841C853EB300BD981E /* SystemConfiguration.framework */; };
+		001E19891C853F2C00BD981E /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001E19881C853F2C00BD981E /* FirebaseController.swift */; };
+		001E198E1C8540C400BD981E /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001E198C1C85407F00BD981E /* Firebase.framework */; };
+		001E198F1C8540C400BD981E /* Firebase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 001E198C1C85407F00BD981E /* Firebase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		01E3FC251BE92C7600187536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E3FC241BE92C7600187536 /* AppDelegate.swift */; };
 		01E3FC2A1BE92C7600187536 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E3FC281BE92C7600187536 /* Main.storyboard */; };
 		01E3FC2C1BE92C7600187536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01E3FC2B1BE92C7600187536 /* Assets.xcassets */; };
@@ -49,7 +57,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		001E19901C8540C400BD981E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				001E198F1C8540C400BD981E /* Firebase.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		001E197C1C853E6B00BD981E /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		001E197E1C853E8800BD981E /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		001E19801C853EA100BD981E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		001E19821C853EA900BD981E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		001E19841C853EB300BD981E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		001E19881C853F2C00BD981E /* FirebaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseController.swift; path = Timeline/FirebaseController.swift; sourceTree = "<group>"; };
+		001E198C1C85407F00BD981E /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		01E3FC211BE92C7600187536 /* Timeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E3FC241BE92C7600187536 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01E3FC291BE92C7600187536 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +115,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				001E19851C853EB300BD981E /* SystemConfiguration.framework in Frameworks */,
+				001E198E1C8540C400BD981E /* Firebase.framework in Frameworks */,
+				001E19831C853EA900BD981E /* Security.framework in Frameworks */,
+				001E19811C853EA100BD981E /* CFNetwork.framework in Frameworks */,
+				001E197F1C853E8800BD981E /* libc++.tbd in Frameworks */,
+				001E197D1C853E6B00BD981E /* libicucore.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,12 +141,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01E3FC181BE92C7600187536 = {
+		001E19861C853ED600BD981E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				001E198C1C85407F00BD981E /* Firebase.framework */,
+				001E19841C853EB300BD981E /* SystemConfiguration.framework */,
+				001E19821C853EA900BD981E /* Security.framework */,
+				001E19801C853EA100BD981E /* CFNetwork.framework */,
+				001E197E1C853E8800BD981E /* libc++.tbd */,
+				001E197C1C853E6B00BD981E /* libicucore.tbd */,
+			);
+			name = Frameworks;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		001E19871C853EF300BD981E /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
 				79AED15A1C7D1D5F00D4D79D /* UserController.swift */,
+				001E19881C853F2C00BD981E /* FirebaseController.swift */,
 				79AED15C1C7D2A5B00D4D79D /* PostController.swift */,
 				79AED15E1C7D469600D4D79D /* ImageController.swift */,
+			);
+			name = "Model Controller";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		01E3FC181BE92C7600187536 = {
+			isa = PBXGroup;
+			children = (
 				01E3FC231BE92C7600187536 /* Timeline */,
 				01E3FC381BE92C7700187536 /* TimelineTests */,
 				01E3FC431BE92C7700187536 /* TimelineUITests */,
@@ -136,7 +194,9 @@
 				01E3FC281BE92C7600187536 /* Main.storyboard */,
 				79574D141C811A8A00E59BEA /* View */,
 				79AED1581C7D1CAE00D4D79D /* Model */,
-				79AED1591C7D1CDB00D4D79D /* Controller */,
+				79AED1591C7D1CDB00D4D79D /* View Controller */,
+				001E19871C853EF300BD981E /* Model Controller */,
+				001E19861C853ED600BD981E /* Frameworks */,
 				01E3FC2B1BE92C7600187536 /* Assets.xcassets */,
 				01E3FC2D1BE92C7600187536 /* LaunchScreen.storyboard */,
 				01E3FC301BE92C7600187536 /* Info.plist */,
@@ -182,7 +242,7 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		79AED1591C7D1CDB00D4D79D /* Controller */ = {
+		79AED1591C7D1CDB00D4D79D /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
 				79AED2A21C7FF03B00D4D79D /* AddPhotoTableViewController.swift */,
@@ -194,7 +254,7 @@
 				7918B55F1C7CFA160003E082 /* TimelineTableViewController.swift */,
 				7918B5651C7CFF5B0003E082 /* ProfileViewController.swift */,
 			);
-			name = Controller;
+			name = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +267,7 @@
 				01E3FC1D1BE92C7600187536 /* Sources */,
 				01E3FC1E1BE92C7600187536 /* Frameworks */,
 				01E3FC1F1BE92C7600187536 /* Resources */,
+				001E19901C8540C400BD981E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -332,6 +393,7 @@
 				7918B56A1C7D044C0003E082 /* LoginSignupChoiceViewController.swift in Sources */,
 				79AED2A31C7FF03B00D4D79D /* AddPhotoTableViewController.swift in Sources */,
 				7918B5601C7CFA160003E082 /* TimelineTableViewController.swift in Sources */,
+				001E19891C853F2C00BD981E /* FirebaseController.swift in Sources */,
 				79AED2A11C7FE2B300D4D79D /* UserSearchResultsTableViewController.swift in Sources */,
 				79AED1571C7D19DD00D4D79D /* Post.swift in Sources */,
 				01E3FC251BE92C7600187536 /* AppDelegate.swift in Sources */,
@@ -485,6 +547,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Timeline/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.devmounta.Timeline;
@@ -496,6 +562,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Timeline/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.devmounta.Timeline;
